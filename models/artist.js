@@ -1,4 +1,4 @@
-const { sequelize } = require(".");
+/*const { sequelize } = require(".");
 
 module.exports = function(sequelize, DataTypes) {
   const Artist = sequelize.define("Artist", {
@@ -33,3 +33,4 @@ module.exports = function(sequelize, DataTypes) {
 
   return Artist;
 };
+*/
