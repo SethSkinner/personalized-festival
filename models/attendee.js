@@ -1,7 +1,6 @@
 const { sequelize } = require(".");
 
-module.exports = function(sequelize, DataTypes)
- {
+module.exports = function(sequelize, DataTypes) {
   const Attendee = sequelize.define("Attendee", {
     name: DataTypes.STRING,
     allowNull: false,
@@ -17,11 +16,11 @@ module.exports = function(sequelize, DataTypes)
     });
   };
 
-//   Attendee.associate = function(models) {
-//     Attendee.hasMany(models.Post, {
-//       onDelete: "cascade"
-//     });
-//   };
+  // Attendee.associate = function(models) {
+  //   Attendee.hasMany(models.Post, {
+  //     onDelete: "cascade"
+  //   });
+  // };
 
   return Attendee;
 };
