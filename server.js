@@ -23,18 +23,13 @@ app.use(passport.session());
 
 var exphbs = require("express-handlebars");
 
-app.engine('handlebars', handlebars({
-  layoutsDir: `${__dirname}/views/layouts` 
-}));
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
+
 app.use(express.static('views'));
 
-app.engine('handlebars', handlebars({
-  layoutsDir: `${__dirname}/views/layouts` 
-}));
-
 app.get('/', (req, res) => {
-res.render('main', {layout: 'index'});
+res.render('index', {layout: 'main'});
 });
 
 

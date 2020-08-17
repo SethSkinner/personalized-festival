@@ -2,3 +2,17 @@ form.signup,
 form.login {
   margin-top: 50px;
 }
+
+.wrapper{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.wrapper > div {
+  background: #eee;
+  padding:1em
+}
+
+.wrapper > div:nth-child(odd){
+  background: #ddd;
+}
