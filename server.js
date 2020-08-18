@@ -33,7 +33,6 @@ res.render('index', {layout: 'main'});
 });
 
 
-
 var routes = require("./controllers/festivalController.js");
 // Syncing our database and logging a message to the user upon success
 //uncomment db.sequelize later
