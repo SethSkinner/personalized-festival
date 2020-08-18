@@ -26,14 +26,14 @@ var exphbs = require("express-handlebars");
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
-app.use(express.static('views'));
+app.use(express.static('public'));
 
 app.get('/', (req, res) => {
 res.render('index', {layout: 'main'});
 });
 
 
-var routes = require("./controllers/festivalController.js");
+//var routes = require("./controllers/festivalController.js");
 // Syncing our database and logging a message to the user upon success
 //uncomment db.sequelize later
 //db.sequelize.sync({force: true}).then(() => {
