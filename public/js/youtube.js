@@ -11,7 +11,7 @@ $(document).ready(function(){
         videoSearch(API_KEY,search,1)
     })
 
-    function videoSearch(key,search,maxResults) {
+    function videoSearch(API_KEY,search,maxResults) {
 
 $('#videos').empty()
 
@@ -19,6 +19,13 @@ $('#videos').empty()
          '&q=' + search,function(data){
             console.log(data)
 
+            data.items.forEach(item => {
+                video = `
+                <iframe width='420' height='315' src='http://www.youtube.com/embed/${item.id.videoId}' frameboarder='0' allowfullscreen></iframe>
+                `
+
+                $('#videos').append(video)
+            })
         })
     }
 })
