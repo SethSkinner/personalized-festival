@@ -17,7 +17,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <h5 class="modal-title" id="exampleModalLabel">login</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -27,41 +27,104 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-primary">Submit</button>
       </div>
     </div>
   </div>
 </div>
+      </li>
+      <li class="nav-item">
+                <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  signup
+</button>
 
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">signup</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        {{>signup}}
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  members
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">members</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        {{>members}}
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
       </li>
     </ul>
-    <<form>
-            <div class='form-group'>
-                <input type='text' class='form-control' id='search'>
-            </div>
-            <div class='form-group'>
-                <input type='submit' class='btn-danger' value='search'>
-            </div>
-        </form>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id='search'>
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit" value='search'>Search</button>
+    </form>
   </div>
 </nav>
 
 <main class='container'>
     <div class='row'>
         <div class ='col-md-3'>
-            
+            <table class='table'>
+              <ul class="nav nav-tabs">
+    <li class="nav-item">
+        <a href="#Artist" class="nav-link active" data-toggle="tab">Artist</a>
+    </li>
+    <li class="nav-item">
+        <a href="#Songs" class="nav-link" data-toggle="tab">Songs</a>
+    </li>
+    <li class="nav-item">
+        <a href="#Playlist" class="nav-link" data-toggle="tab">Playlist</a>
+    </li>
+</ul>
+<div class="tab-content">
+    <div class="tab-pane fade show active" id="Artist">
+        <div>Artist Content!</div>
+    </div>
+    <div class="tab-pane fade" id="Songs">
+        <div>Songs Content!</div>
+    </div>
+    <div class="tab-pane fade" id="Playlist">
+        <div>Playlist Content!</div>>
+    </div>
+</div>
+            </table>
         </div>
-        <div class ='col-md-7'>
+        <div class ='col-md-9'>
             <div id='videos'></div>
-        </div>
-        <div class ='col-md-3'>
-            
         </div>
     </div>
 </main>
