@@ -53,7 +53,7 @@ module.exports = function(app) {
   });
 };
 
-Router.get("/", (req, res) => {
-  res.send("index.js");
-});
+//Router.get("/", (req, res) => {
+//  res.send("index.js");
+//});
 
