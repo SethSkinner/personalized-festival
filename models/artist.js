@@ -1,4 +1,4 @@
-/*const { sequelize } = require(".");
+const { sequelize } = require(".");
 
 module.exports = function(sequelize, DataTypes) {
   const Artist = sequelize.define("Artist", {
@@ -25,12 +25,11 @@ module.exports = function(sequelize, DataTypes) {
     }
   });
 
-  Artist.associate = function(models) {
-    Artist.belongsTo(models.Attendee, {
-      onDelete: "cascade"
-    });
-  };
+  // Artist.associate = function(models) {
+  //   Artist.belongsTo(models.Attendee, {
+  //     onDelete: "cascade"
+  //   });
+  // };
 
   return Artist;
 };
-*/
