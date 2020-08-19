@@ -1,5 +1,5 @@
 $(document).ready(() => {
-  const API_KEY = "AIzaSyBqnUPy6o1c-V4MGOw_1GcCueLKFJOSo5s";
+  const API_KEY = "AIzaSyB8RKx81I_wLM5TZa2jNR6Jd8j04yYypsI";
 
   $("form").submit((event) => {
     event.preventDefault()
@@ -15,6 +15,7 @@ $(document).ready(() => {
     $.get("https://www.googleapis.com/youtube/v3/search?key="+ API_KEY + "&type=video&part=snippet&maxResults=" + maxResults +
          "&q=" + search, (data) => {
       console.log(data);
+      console.log(data.items[0].id.videoId);
 
       data.items.forEach(item => {
         video = `
