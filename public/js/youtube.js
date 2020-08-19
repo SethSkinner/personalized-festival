@@ -4,8 +4,6 @@ $(document).ready(() => {
   $("form").submit((event) => {
     event.preventDefault()
 
-    const video = "";
-
     const search = $('#search').val()
 
     videoSearch(API_KEY, search, 1);
