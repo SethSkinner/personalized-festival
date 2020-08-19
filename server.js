@@ -25,6 +25,9 @@ app.set("view engine", "handlebars");
 
 app.use(express.static("public"));
 
+require("./routes/html-routes.js")(app);
+require("./routes/api-routes.js")(app);
+
 app.get("/", (req, res) => {
   res.render("index");
 });
@@ -32,7 +35,7 @@ app.get("/", (req, res) => {
 // var routes = require("./controllers");
 // Syncing our database and logging a message to the user upon success
 //uncomment db.sequelize later
-db.sequelize.sync({ force: false }).then(() => {
+db.sequelize.sync({ force: true }).then(() => {
   app.listen(PORT, () => {
     console.log(
       "==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.",
