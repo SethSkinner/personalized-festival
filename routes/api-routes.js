@@ -51,9 +51,37 @@ module.exports = function(app) {
       });
     }
   });
-};
+
 
 //Router.get("/", (req, res) => {
 //  res.send("index.js");
 //});
 
+  app.post("/api/attendees", (req, res) => {
+    db.Attendee.create({
+      name: req.body.name
+    }).then(dbAttendee => {
+      res.json(dbAttendee);
+    });
+  });
+
+  app.get("/api/attendees:id", (req, res) => {
+    db.Attendee.findOne({
+      where: {
+        id: req.params.id
+      }
+    }).then(dbAttendee => {
+      res.json(dbAttendee);
+    });
+  });
+
+  app.delete("/api/attendees:id", (req, res) => {
+    db.Attendee.destroy({
+      where: {
+        id: req.params.id
+      }
+    }).then(dbAttendee => {
+      res.json(dbAttendee);
+    });
+  });
+};
