@@ -84,4 +84,34 @@ module.exports = function(app) {
       res.json(dbAttendee);
     });
   });
+
+  app.post("/api/artists", (req, res) => {
+    db.Artist.create({
+      name: req.body.name,
+      song: req.body.song,
+      videoID: req.body.videoID
+    }).then(dbArtist => {
+      res.json(dbArtist);
+    });
+  });
+
+  app.get("/api/artists:id", (req, res) => {
+    db.Artist.findOne({
+      where: {
+        id: req.params.id
+      }
+    }).then(dbArtist => {
+      res.json(dbArtist);
+    });
+  });
+
+  app.delete("/api/artists:id", (req, res) => {
+    db.Artist.destroy({
+      where: {
+        id: req.params.id
+      }
+    }).then(dbArtist => {
+      res.json(dbArtist);
+    });
+  });
 };
