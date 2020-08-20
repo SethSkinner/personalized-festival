@@ -15,10 +15,7 @@ module.exports = function(sequelize, DataTypes) {
     },
     videoId: {
       type: DataTypes.STRING,
-      allowNull: true,
-      validate: {
-        len: [1]
-      }
+      allowNull: true
     }
   });
 
@@ -27,6 +24,8 @@ module.exports = function(sequelize, DataTypes) {
   //     onDelete: "cascade"
   //   });
   // };
-
+  Song.addHook("beforeCreate", song => {
+    console.log(song);
+  });
   return Song;
 };
