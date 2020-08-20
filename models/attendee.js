@@ -11,7 +11,7 @@ module.exports = function(sequelize, DataTypes) {
 
   Attendee.associate = function(models) {
     Attendee.belongsTo(models.User);
-    Attendee.hasMany(models.Artist, {
+    Attendee.hasMany(models.Song, {
       onDelete: "cascade"
     });
   };

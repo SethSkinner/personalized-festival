@@ -85,33 +85,33 @@ module.exports = function(app) {
     });
   });
 
-  app.post("/api/artists", (req, res) => {
-    db.Artist.create({
+  app.post("/api/songs", (req, res) => {
+    db.Song.create({
       name: req.body.name,
-      song: req.body.song,
+      userId: req.body.song,
       videoID: req.body.videoID
-    }).then(dbArtist => {
-      res.json(dbArtist);
+    }).then(dbSong => {
+      res.json(dbSong);
     });
   });
 
-  app.get("/api/artists:id", (req, res) => {
-    db.Artist.findOne({
+  app.get("/api/songs:id", (req, res) => {
+    db.Song.findOne({
       where: {
         id: req.params.id
       }
-    }).then(dbArtist => {
-      res.json(dbArtist);
+    }).then(dbSong => {
+      res.json(dbSong);
     });
   });
 
-  app.delete("/api/artists:id", (req, res) => {
-    db.Artist.destroy({
+  app.delete("/api/songs:id", (req, res) => {
+    db.Song.destroy({
       where: {
         id: req.params.id
       }
-    }).then(dbArtist => {
-      res.json(dbArtist);
+    }).then(dbSong => {
+      res.json(dbSong);
     });
   });
 };
