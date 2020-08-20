@@ -5,9 +5,29 @@ $(document).ready(() => {
     event.preventDefault()
 
     const search = $('#search').val()
-
+    handleSongFormSubmit();
     videoSearch(API_KEY, search, 1);
   });
+
+  const songInput = $("#search");
+
+  function handleSongFormSubmit() {
+    // Don't do anything if the name fields hasn't been filled out
+    if (!songInput.val()) {
+      return;
+    }
+    // Calling the upsertAuthor function and passing in the value of the name input
+    upsertSong({
+      name: songInput.val().trim()
+    });
+  }
+
+  // A function for creating a song.
+  function upsertSong(songData) {
+    $.post("/api/songs", songData).then(dbSong => {
+      res.json(dbSong);
+    });
+  }
 
   function videoSearch(API_KEY, search, maxResults) {
     $("#videos").empty();

@@ -59,12 +59,12 @@ module.exports = function(app) {
   });
 
   app.delete("/api/attendees/:id", (req, res) => {
-    db.Author.destroy({
+    db.Attendee.destroy({
       where: {
         id: req.params.id
       }
-    }).then((dbAuthor) => {
-      res.json(dbAuthor);
+    }).then((dbAttendee) => {
+      res.json(dbAttendee);
     });
   });
 };
