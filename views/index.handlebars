@@ -1,37 +1,75 @@
- <form class="form-inline my-2 my-lg-0" id='form1'>
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id='search'>
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit" value='search'>Search</button>
-    </form>
+<form class="form-inline my-2 my-lg-0" id='form1'>
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id='search'>
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit" value='search'>Search</button>
+</form>
 <main class='container'>
     <div class='row'>
-        <div class ='col-md-3'>
+        <div class='col-md-3'>
             <table class='table'>
-              <ul class="nav nav-tabs">
-    <li class="nav-item">
-        <a href="#Artist" class="nav-link active" data-toggle="tab">Artist</a>
-    </li>
-    <li class="nav-item">
-        <a href="#Songs" class="nav-link" data-toggle="tab">Songs</a>
-    </li>
-    <li class="nav-item">
-        <a href="#Playlist" class="nav-link" data-toggle="tab">Playlist</a>
-    </li>
-</ul>
-<div class="tab-content">
-    <div class="tab-pane fade show active" id="Artist">
-        <div>Artist Content!</div>
-    </div>
-    <div class="tab-pane fade" id="Songs">
-        <div>Songs Content!</div>
-    </div>
-    <div class="tab-pane fade" id="Playlist">
-        <div>Playlist Content!</div>>
-    </div>
-</div>
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a href="#Artist" class="nav-link active" data-toggle="tab">Artist</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#Songs" class="nav-link" data-toggle="tab">Songs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#Playlist" class="nav-link" data-toggle="tab">Playlist</a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade show active" id="Artist">
+                        <div>Artist Content!</div>
+                    </div>
+                    <div class="tab-pane fade" id="Songs">
+                        <div>Songs Content!</div>
+                    </div>
+                    <div class="tab-pane fade" id="Playlist">
+                        <div>Playlist Content!</div>>
+                    </div>
+                </div>
             </table>
         </div>
-        <div class ='col-md-9'>
+        <div class='col-md-9'>
             <div id='videos'></div>
         </div>
     </div>
 </main>
+
+<nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+</nav>
+<br>
+<div>
+    <h2>Welcome to Stage 1</h2>
+</div>
+<div class="container-fluid" id="stageOne">
+    <!-- Need to get DB info here with dimensions of 840 x 472.5 -->
+    <iframe width="840" height="472.5" src="https://www.youtube.com/embed/{{youtubeID}}" frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+        class="concertVideo"></iframe>
+</div>
+<br />
+<div data-aos="fade-up">
+    <h2>Welcome to Stage 2</h2>
+</div>
+<div class="container-fluid" id="stageTwo" data-aos="fade-up">
+    <!-- Need to get DB info here with dimensions of 840 x 472.5 -->
+    <iframe width="840" height="472.5" src="https://www.youtube.com/embed/{{youtubeID}}" frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+        class="concertVideo"></iframe>
+</div>
+<br />
+<div data-aos="fade-up">
+    <h2>Welcome to Stage 3</h2>
+</div>
+<div class="container-fluid" id="stageThree" data-aos="fade-up">
+    <!-- Need to get DB info here with dimensions of 840 x 472.5 -->
+    <iframe width="840" height="472.5" src="https://www.youtube.com/embed/{{youtubeID}}" frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+        class="concertVideo"></iframe>
+</div>
