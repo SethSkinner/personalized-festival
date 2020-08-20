@@ -1,7 +1,7 @@
 $(document).ready(() => {
   const API_KEY = "AIzaSyB8RKx81I_wLM5TZa2jNR6Jd8j04yYypsI";
 
-  $("form").submit((event) => {
+  $("#form1").submit((event) => {
     event.preventDefault()
 
     const search = $('#search').val()
