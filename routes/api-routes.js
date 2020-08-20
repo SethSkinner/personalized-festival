@@ -88,8 +88,8 @@ module.exports = function(app) {
   app.post("/api/songs", (req, res) => {
     db.Song.create({
       name: req.body.name,
-      userId: req.body.song,
-      videoID: req.body.videoID
+      userId: req.body.userId,
+      videoId: req.body.videoId
     }).then(dbSong => {
       res.json(dbSong);
     });
