@@ -110,68 +110,112 @@ var YouTubePlayer = {
       }
   }
 }
-function onYouTubeIframeAPIReady() {
-  YouTubePlayer.player = new YT.Player('youtube', {
-      height: '350',
-      width: '425',
-      events: {
-          'onReady': YouTubePlayer.onReady,
-          'onStateChange': YouTubePlayer.onStateChange
-      }
-  });
-}
-var YouTubePlayer = {
-  current: 0,
-  player: null,
+var YouTubePlayer2 = {
+  current2: 0,
+  player2: null,
   /**
    * Tracks ids here...
    */
-  videos: [
+  videos2: [
+      'Lq8bpo9KWa8',
       'cpbbuaIA3Ds',
-  'OtcdGkGusU0'
+  
   ],
-  currentlyPlaying:function(){
-      console.info('Current Track id', YouTubePlayer.videos[YouTubePlayer.current]);
-      return YouTubePlayer.videos[YouTubePlayer.current];
+  currentlyPlaying2:function(){
+      console.info('Current2 Track id', YouTubePlayer2.videos2[YouTubePlayer2.current2]);
+      return YouTubePlayer2.videos2[YouTubePlayer2.current2];
   },
-  playNext: function () {
-      YouTubePlayer.increaseTrack()
+  playNext2: function () {
+      YouTubePlayer2.increaseTrack2()
       debugger
-      if (YouTubePlayer.player) {
-          YouTubePlayer.player.loadVideoById(YouTubePlayer.currentlyPlaying());
+      if (YouTubePlayer2.player2) {
+          YouTubePlayer2.player2.loadVideoById(YouTubePlayer2.currentlyPlaying2());
       } else {
-          alert('Please Wait! Player is loading');
+          alert('Please Wait! Player2 is loading');
       }
   },
-  playPrevious: function () {
-      YouTubePlayer.decreaseTrack()
-      if (YouTubePlayer.player) {
-          YouTubePlayer.player.loadVideoById(YouTubePlayer.currentlyPlaying());
+  playPrevious2: function () {
+      YouTubePlayer2.decreaseTrack2()
+      if (YouTubePlayer2.player2) {
+          YouTubePlayer2.player2.loadVideoById(YouTubePlayer2.currentlyPlaying2());
       } else {
-          alert('Please Wait! Player is loading');
+          alert('Please Wait! Player2 is loading');
       }
 
   },
-  increaseTrack: function () {
-      YouTubePlayer.current = YouTubePlayer.current + 1;
-      if (YouTubePlayer.current >= YouTubePlayer.videos.length) {
-          YouTubePlayer.current = 0;
+  increaseTrack2: function () {
+      YouTubePlayer2.current2 = YouTubePlayer2.current2 + 1;
+      if (YouTubePlayer2.current2 >= YouTubePlayer2.videos2.length) {
+          YouTubePlayer2.current2 = 0;
       }
   },
-  decreaseTrack: function () {
-      YouTubePlayer.current = Math.max(YouTubePlayer.current - 1, 0);
+  decreaseTrack2: function () {
+      YouTubePlayer2.current2 = Math.max(YouTubePlayer2.current2 - 1, 0);
   },
-  onReady: function (event) {
-      event.target.loadVideoById(YouTubePlayer.currentlyPlaying());
+  onReady2: function (event) {
+      event.target.loadVideoById(YouTubePlayer2.currentlyPlaying2());
   },
-  onStateChange: function (event) {
+  onStateChange2: function (event) {
       if (event.data == YT.PlayerState.ENDED) {
-          YouTubePlayer.playNext();
+          YouTubePlayer2.playNext2();
       }
   }
 }
+
+var YouTubePlayer3 = {
+  current3: 0,
+  player3: null,
+  /**
+   * Tracks ids here...
+   */
+  videos3: [
+      'OtcdGkGusU0',
+      'cpbbuaIA3Ds',
+  
+  ],
+  currentlyPlaying3:function(){
+      console.info('Current3 Track id', YouTubePlayer3.videos3[YouTubePlayer3.current3]);
+      return YouTubePlayer3.videos3[YouTubePlayer3.current3];
+  },
+  playNext3: function () {
+      YouTubePlayer3.increaseTrack3()
+      debugger
+      if (YouTubePlayer3.player3) {
+          YouTubePlayer3.player3.loadVideoById(YouTubePlayer3.currentlyPlaying3());
+      } else {
+          alert('Please Wait! Player3 is loading');
+      }
+  },
+  playPrevious3: function () {
+      YouTubePlayer3.decreaseTrack3()
+      if (YouTubePlayer3.player3) {
+          YouTubePlayer3.player3.loadVideoById(YouTubePlayer3.currentlyPlaying3());
+      } else {
+          alert('Please Wait! Player3 is loading');
+      }
+
+  },
+  increaseTrack3: function () {
+      YouTubePlayer3.current3 = YouTubePlayer3.current3 + 1;
+      if (YouTubePlayer3.current3 >= YouTubePlayer3.videos3.length) {
+          YouTubePlayer3.current3 = 0;
+      }
+  },
+  decreaseTrack3: function () {
+      YouTubePlayer3.current3 = Math.max(YouTubePlayer3.current3 - 1, 0);
+  },
+  onReady3: function (event) {
+      event.target.loadVideoById(YouTubePlayer3.currentlyPlaying3());
+  },
+  onStateChange3: function (event) {
+      if (event.data == YT.PlayerState.ENDED) {
+          YouTubePlayer3.playNext3();
+      }
+  }
+}
+
 function onYouTubeIframeAPIReady() {
-  YouTubePlayer.player = new YT.Player('youtube', {
+  YouTubePlayer.player = new YT.Player('youtube1', {
       height: '350',
       width: '425',
       events: {
@@ -179,4 +223,20 @@ function onYouTubeIframeAPIReady() {
           'onStateChange': YouTubePlayer.onStateChange
       }
   });
-}
+  YouTubePlayer2.player2 = new YT.Player('youtube2', {
+    height: '350',
+    width: '425',
+    events: {
+        'onReady': YouTubePlayer2.onReady2,
+        'onStateChange': YouTubePlayer2.onStateChange2
+    }
+});
+YouTubePlayer3.player3 = new YT.Player('youtube3', {
+  height: '350',
+  width: '425',
+  events: {
+      'onReady': YouTubePlayer3.onReady3,
+      'onStateChange': YouTubePlayer3.onStateChange3
+  }
+});
+};
