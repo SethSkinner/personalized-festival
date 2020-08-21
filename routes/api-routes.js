@@ -2,6 +2,7 @@
 const db = require("../models");
 const passport = require("../config/passport");
 const { Router } = require("express");
+const isAuthenticated = require("../config/middleware/isAuthenticated");
 
 module.exports = function(app) {
   // Using the passport.authenticate middleware with our local strategy.
@@ -85,17 +86,17 @@ module.exports = function(app) {
     });
   });
 
-  app.post("/api/songs", (req, res) => {
+  app.post("/api/songs", isAuthenticated, (req, res) => {
     db.Song.create({
       name: req.body.name,
-      userId: req.body.userId,
+      userId: req.user.id,
       videoId: req.body.videoId
     }).then(dbSong => {
       res.json(dbSong);
     });
   });
 
-  app.get("/api/songs:id", (req, res) => {
+  app.get("/api/songs/:id", (req, res) => {
     db.Song.findOne({
       where: {
         id: req.params.id
@@ -105,10 +106,11 @@ module.exports = function(app) {
     });
   });
 
-  app.delete("/api/songs:id", (req, res) => {
+  app.delete("/api/songs/:id", isAuthenticated, (req, res) => {
     db.Song.destroy({
       where: {
-        id: req.params.id
+        id: req.params.id,
+        userId: req.user.id
       }
     }).then(dbSong => {
       res.json(dbSong);
