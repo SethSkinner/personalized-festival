@@ -60,33 +60,33 @@ module.exports = function(app) {
 //  res.send("index.js");
 //});
 
-  app.post("/api/attendees", (req, res) => {
-    db.Attendee.create({
-      name: req.body.name
-    }).then(dbAttendee => {
-      res.json(dbAttendee);
-    });
-  });
+  // app.post("/api/attendees", (req, res) => {
+  //   db.Attendee.create({
+  //     name: req.body.name
+  //   }).then(dbAttendee => {
+  //     res.json(dbAttendee);
+  //   });
+  // });
 
-  app.get("/api/attendees:id", (req, res) => {
-    db.Attendee.findOne({
-      where: {
-        id: req.params.id
-      }
-    }).then(dbAttendee => {
-      res.json(dbAttendee);
-    });
-  });
+  // app.get("/api/attendees:id", (req, res) => {
+  //   db.Attendee.findOne({
+  //     where: {
+  //       id: req.params.id
+  //     }
+  //   }).then(dbAttendee => {
+  //     res.json(dbAttendee);
+  //   });
+  // });
 
-  app.delete("/api/attendees:id", (req, res) => {
-    db.Attendee.destroy({
-      where: {
-        id: req.params.id
-      }
-    }).then(dbAttendee => {
-      res.json(dbAttendee);
-    });
-  });
+  // app.delete("/api/attendees:id", (req, res) => {
+  //   db.Attendee.destroy({
+  //     where: {
+  //       id: req.params.id
+  //     }
+  //   }).then(dbAttendee => {
+  //     res.json(dbAttendee);
+  //   });
+  // });
 
   app.post("/api/songs", isAuthenticated, (req, res) => {
     db.Song.create({
@@ -116,6 +116,30 @@ module.exports = function(app) {
       }
     }).then(dbSong => {
       res.json(dbSong);
+    });
+  });
+
+  // GET route for getting all of the posts
+  app.get("/api/posts", (req, res) => {
+    const query = {};
+    if (req.query.userId) {
+      query.userId = req.query.userId;
+    }
+    // Here we add an "include" property to our options in our findAll query
+    // We set the value to an array of the models we want to include in a left outer join
+    // In this case, just db.user
+    db.Post.findAll({
+      where: query,
+      include: [db.User]
+    }).then((dbPost) => {
+      res.json(dbPost);
+    });
+  });
+
+  // POST route for saving a new post
+  app.post("/api/posts", (req, res) => {
+    db.Post.create(req.body).then((dbPost) => {
+      res.json(dbPost);
     });
   });
 };

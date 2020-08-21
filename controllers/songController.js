@@ -1,20 +1,6 @@
 const express = require("express");
 const router = express.Router();
-// const song = require("../models/song.js");
 const db = require("../models");
-
-// router.post("/api/songs", (req, res) => {
-//   song.insertOne(
-//     ["name", "userId", "videoId"], 
-//     [req.body.name, req.body.userId, req.body.videoId],
-//     result => {
-//       res.json({ id: result.insertId });
-//     }
-//   );
-// });
-
-// module.exports = router;
-
 
 module.exports = function(app) {
   app.get("/api/songs", (req, res) => {
