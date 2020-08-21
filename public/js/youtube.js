@@ -60,6 +60,11 @@ $(document).ready(() => {
       }
     );
   }
+
+  $.get("/api/song/videoId").then((data) => {
+    console.log("here");
+    console.log(data);
+  });
 });
 
 var YouTubePlayer = {

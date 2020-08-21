@@ -142,4 +142,36 @@ module.exports = function(app) {
       res.json(dbPost);
     });
   });
+
+  app.get("/api/song/videoId", (req, res) => {
+    if (!req.user) {
+      // console.log(req.user);
+
+      res.end();
+      //   // console.log("im here");
+      //   //   // The user is not logged in, send back an empty object
+    } else {
+      //   //   // Otherwise send back the user's email and id
+      //   //   // Sending back a password, even a hashed password, isn't a good idea
+
+      db.Song.findAll(
+        // {
+        //   picURL: req.user.picURL
+        // },
+        {
+          where: {
+            userId: req.user.id
+          }
+        }
+      ).then(data => {
+        // this works below
+        // console.log(res.dataValues.picURL);
+
+        // return res.dataValues.picURL;
+        // res.json(data.dataValues.picURL);
+        //.Song.dataValues.videoId
+        console.log(data);
+      });
+    }
+  });
 };

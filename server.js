@@ -27,7 +27,7 @@ app.use(express.static("public"));
 
 require("./routes/html-routes.js")(app);
 require("./routes/api-routes.js")(app);
-require("./controllers/attendeeController")(app);
+require("./controllers/postController")(app);
 require("./controllers/songController")(app);
 
 app.get("/", (req, res) => {
