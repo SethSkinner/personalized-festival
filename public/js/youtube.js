@@ -8,10 +8,11 @@ $(document).ready(() => {
   //Maria
   const API_KEY = "AIzaSyC6dPvMs2eQxvcoGDRFHvgAhlQx0TqUNCA";
 
+  // eslint-disable-next-line prettier/prettier
   $("#form1").submit((event) => {
-    event.preventDefault()
+    event.preventDefault();
 
-    const search = $('#search').val()
+    const search = $("#search").val();
     videoSearch(API_KEY, search, 1);
   });
 
@@ -36,11 +37,12 @@ $(document).ready(() => {
   }
 
   function appendVideo(data) {
-    data.items.forEach(item => {
+    // eslint-disable-next-line prettier/prettier
+    data.items.forEach((item) => {
       video = `
             <iframe width='420' height='315' src='http://www.youtube.com/embed/${item.id.videoId}' frameboarder='0' allowfullscreen></iframe>`;
 
-      $('#videos').append(video)
+      $("#videos").append(video);
     });
   }
 
@@ -53,12 +55,15 @@ $(document).ready(() => {
         "&type=video&part=snippet&maxResults=" +
         maxResults +
         "&q=" +
-        search, (data) => {
-          console.log(data);
-          console.log(data.items[0].id.videoId);
+        search,
+      // eslint-disable-next-line prettier/prettier
+      (data) => {
+        console.log(data);
+        console.log(data.items[0].id.videoId);
         upsertSong({
           videoId: data.items[0].id.videoId,
-          name: data.items[0].snippet.title
+          // eslint-disable-next-line prettier/prettier
+          name: data.items[0].snippet.title,
         });
         appendVideo(data);
       }

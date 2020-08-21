@@ -3,16 +3,70 @@ form.login {
   margin-top: 50px;
 }
 
-.wrapper{
+.wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
 
 .wrapper > div {
   background: #eee;
-  padding:1em
+  padding: 1em;
 }
 
-.wrapper > div:nth-child(odd){
+.wrapper > div:nth-child(odd) {
   background: #ddd;
+}
+
+body {
+  color: white;
+  background: url("../assets/blackgradiant.jpg") no-repeat center center fixed;
+  background-size: 100% 100%;
+}
+
+#stageOne {
+  background-image: url("../assets/Stage.png");
+  background-repeat: no-repeat;
+  background-size: 1440px 900px;
+  background-position: center;
+  text-align: center;
+  width: 100%;
+}
+
+#stageTwo {
+  background-image: url("../assets/stage2.png");
+  background-repeat: no-repeat;
+  background-size: 1440px 900px;
+  background-position: center;
+  text-align: center;
+  width: 100%;
+}
+
+#stageThree {
+  background-image: url("../assets/stage3.png");
+  background-repeat: no-repeat;
+  background-size: 1440px 900px;
+  background-position: center;
+  text-align: center;
+  width: 100%;
+}
+
+.container-fluid {
+  height: 900px;
+}
+
+.concertVideo {
+  margin-top: 200px;
+  width: 400;
+}
+
+.concertVideo iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+h2 {
+  text-align: center;
 }
