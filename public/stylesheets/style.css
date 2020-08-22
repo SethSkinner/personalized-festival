@@ -1,6 +1,12 @@
 form.signup,
-form.login {
+form.login,
+h2 {
   margin-top: 50px;
+}
+
+#search {
+  margin-top: 10px;
+  margin-bottom: 15px;
 }
 
 body {
