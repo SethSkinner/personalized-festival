@@ -1,16 +1,6 @@
 $(document).ready(() => {
   //production key
-  const API_KEY = 'AIzaSyCp_AB1XgF0JIID5dz60D1DuGFL4vAfT5U';
-  //seth1
-  //const API_KEY = "AIzaSyB8RKx81I_wLM5TZa2jNR6Jd8j04yYypsI";
-  //Thomas1
-  // const API_KEY = "AIzaSyBqnUPy6o1c-V4MGOw_1GcCueLKFJOSo5s";
-  //Thomas2
-  // const API_KEY = "AIzaSyALxc9zxI-pJp33r-9awOLo4AWY3wYydrQ";
-  //Maria
-  //const API_KEY = "AIzaSyC6dPvMs2eQxvcoGDRFHvgAhlQx0TqUNCA";
-
-  // eslint-disable-next-line prettier/prettier
+  const API_KEY = SECRET_KEY
   $("#form1").submit((event) => {
     event.preventDefault();
 
