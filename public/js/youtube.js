@@ -1,4 +1,16 @@
 $(document).ready(() => {
+  //production key
+  const API_KEY = 'AIzaSyCp_AB1XgF0JIID5dz60D1DuGFL4vAfT5U';
+  //seth1
+  //const API_KEY = "AIzaSyB8RKx81I_wLM5TZa2jNR6Jd8j04yYypsI";
+  //Thomas1
+  // const API_KEY = "AIzaSyBqnUPy6o1c-V4MGOw_1GcCueLKFJOSo5s";
+  //Thomas2
+  // const API_KEY = "AIzaSyALxc9zxI-pJp33r-9awOLo4AWY3wYydrQ";
+  //Maria
+  //const API_KEY = "AIzaSyC6dPvMs2eQxvcoGDRFHvgAhlQx0TqUNCA";
+
+  // eslint-disable-next-line prettier/prettier
   $("#form1").submit((event) => {
     event.preventDefault();
 
@@ -6,6 +18,19 @@ $(document).ready(() => {
     videoSearch(API_KEY, search, 1);
   });
 
+  // const songInput = $("#search");
+
+  // function handleSongFormSubmit() {
+  //   // Don't do anything if the name fields hasn't been filled out
+  //   if (!songInput.val()) {
+  //     return;
+  //   }
+  //   // Calling the upsertAuthor function and passing in the value of the name input
+  //   upsertSong({
+  //     name: songInput.val().trim(),
+  //     videoId: data.items[0].id.videoId
+  //   });
+  // }
 
   // A function for creating a song.
   function upsertSong(songData) {
