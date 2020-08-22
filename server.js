@@ -1,4 +1,5 @@
 // Requiring necessary npm packages
+require('dotenv').config();
 const express = require("express");
 const session = require("express-session");
 // Requiring passport as we've configured it
@@ -8,6 +9,7 @@ const exphbs = require("express-handlebars");
 // Setting up port and requiring models for syncing
 const PORT = process.env.PORT || 8080;
 const db = require("./models");
+console.log(process.env.API_KEY_SECRET_KEY)
 
 // Creating express app and configuring middleware needed for authentication
 const app = express();
