@@ -170,6 +170,7 @@ var YouTubePlayer = {
     },
     onReady2: function (event) {
         event.target.loadVideoById(YouTubePlayer2.currentlyPlaying2());
+        event.target.pauseVideo();
     },
     onStateChange2: function (event) {
         if (event.data == YT.PlayerState.ENDED) {
@@ -222,7 +223,7 @@ var YouTubePlayer = {
     },
     onReady3: function (event) {
         event.target.loadVideoById(YouTubePlayer3.currentlyPlaying3());
-        YoutubePlayer3.pauseVideo();
+        event.target.pauseVideo();
     },
     onStateChange3: function (event) {
         if (event.data == YT.PlayerState.ENDED) {
@@ -253,8 +254,8 @@ var YouTubePlayer = {
     events: {
         'onReady': YouTubePlayer3.onReady3,
         'onStateChange': YouTubePlayer3.onStateChange3
-    }
-  });
+        }
+    });
   };
   onYouTubeIframeAPIReady();
 });
