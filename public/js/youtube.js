@@ -1,6 +1,6 @@
 $(document).ready(() => {
   //production key
-  const API_KEY = process.env.APIKEY
+  const API_KEY = 'AIzaSyChsd7-3GMuNfIEjNNVrBx00L07EapEfOs'
   $("#form1").submit((event) => {
     event.preventDefault();
 
