@@ -1,6 +1,5 @@
 $(document).ready(() => {
-  //production key
-  const API_KEY = SECRET_KEY
+
   $("#form1").submit((event) => {
     event.preventDefault();
 
@@ -8,19 +7,6 @@ $(document).ready(() => {
     videoSearch(API_KEY, search, 1);
   });
 
-  // const songInput = $("#search");
-
-  // function handleSongFormSubmit() {
-  //   // Don't do anything if the name fields hasn't been filled out
-  //   if (!songInput.val()) {
-  //     return;
-  //   }
-  //   // Calling the upsertAuthor function and passing in the value of the name input
-  //   upsertSong({
-  //     name: songInput.val().trim(),
-  //     videoId: data.items[0].id.videoId
-  //   });
-  // }
 
   // A function for creating a song.
   function upsertSong(songData) {
