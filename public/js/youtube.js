@@ -1,6 +1,6 @@
 $(document).ready(() => {
   //production key
-  const API_KEY = SECRET_KEY
+  const API_KEY
   $("#form1").submit((event) => {
     event.preventDefault();
 
