@@ -1,3 +1,4 @@
+
 $(document).ready(() => {
   //production key
   //const API_KEY = 'AIzaSyDJ590q81TkArxpANKfHeVTa7l2xf0NnJU';
@@ -18,6 +19,11 @@ $(document).ready(() => {
     videoSearch(API_KEY, search, 1);
   });
 
+  $.get("/api/song/videoId").then((data) => {
+      console.log('hello')
+    console.log(data);
+});
+
   // const songInput = $("#search");
 
   // function handleSongFormSubmit() {
@@ -37,9 +43,7 @@ $(document).ready(() => {
     console.log(songData);
     $.post("/api/songs", songData);
   }
-
-
-
+  
   function videoSearch(API_KEY, search, maxResults) {
     $.get(
       "https://www.googleapis.com/youtube/v3/search?key=" +
@@ -60,11 +64,6 @@ $(document).ready(() => {
       }
     );
   }
-
-  $.get("/api/song/videoId").then((data) => {
-    console.log("here");
-    console.log(data);
-  });
 });
 
 var YouTubePlayer = {
@@ -74,9 +73,8 @@ var YouTubePlayer = {
    * Tracks ids here...
    */
   videos: [
-      'cpbbuaIA3Ds',
-  'OtcdGkGusU0'
-  ],
+    ''
+],
   currentlyPlaying:function(){
       console.info('Current Track id', YouTubePlayer.videos[YouTubePlayer.current]);
       return YouTubePlayer.videos[YouTubePlayer.current];
