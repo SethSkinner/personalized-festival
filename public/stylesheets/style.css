@@ -9,6 +9,40 @@ body {
   background-size: 100% 100%;
 }
 
+h1 {
+  text-align: center;
+}
+
+.container-fluid {
+  position: relative;
+  height: 900px;
+  padding-bottom: 300px;
+}
+
+#parentContainer1 {
+  background-image: url("https://media2.giphy.com/media/f9N5rnQtzo19wU9REY/giphy.gif");
+  background-size: 100% 100%;
+  width: auto;
+  height: 1000px;
+  margin-bottom: 250px;
+}
+
+#parentContainer2 {
+  background-image: url("https://media2.giphy.com/media/l3CfDPuC0OnE9btBqJ/giphy.gif");
+  background-size: 100% 100%;
+  width: auto;
+  height: 1000px;
+  margin-bottom: 250px;
+}
+
+#parentContainer3 {
+  background-image: url("https://media2.giphy.com/media/kc6jvTZ9QundQrFtm6/giphy.gif");
+  background-size: 100% 100%;
+  width: auto;
+  height: 1000px;
+  margin-bottom: 250px;
+}
+
 #stageOne {
   background-image: url("../assets/Stage.png");
   background-repeat: no-repeat;
@@ -16,6 +50,7 @@ body {
   background-position: center;
   text-align: center;
   width: 100%;
+  height: 100%;
 }
 
 #stageTwo {
@@ -25,6 +60,7 @@ body {
   background-position: center;
   text-align: center;
   width: 100%;
+  height: 100%;
 }
 
 #stageThree {
@@ -34,14 +70,10 @@ body {
   background-position: center;
   text-align: center;
   width: 100%;
+  height: 100%;
 }
-
-.container-fluid {
-  height: 900px;
-}
-
 .concertVideo {
-  margin-top: 200px;
+  margin-top: 300px;
   width: 400;
 }
 
@@ -52,8 +84,3 @@ body {
   width: 100%;
   position: absolute;
 }
-
-h2 {
-  text-align: center;
-}
-
