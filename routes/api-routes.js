@@ -155,22 +155,14 @@ module.exports = function(app) {
       //   //   // Sending back a password, even a hashed password, isn't a good idea
 
       db.Song.findAll(
-        // {
-        //   picURL: req.user.picURL
-        // },
         {
           where: {
-            userId: req.user.id
+            userId: req.user.id,
           }
         }
       ).then(data => {
-        // this works below
-        // console.log(res.dataValues.picURL);
-
-        // return res.dataValues.picURL;
-        // res.json(data.dataValues.picURL);
-        //.Song.dataValues.videoId
-        console.log(data);
+        console.log(data[0].dataValues.videoId);
+        res.json(data[0].dataValues.videoId)
       });
     }
   });
