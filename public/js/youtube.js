@@ -1,8 +1,8 @@
 $(document).ready(() => {
   //production key
-  //const API_KEY = 'AIzaSyDJ590q81TkArxpANKfHeVTa7l2xf0NnJU';
+  const API_KEY = 'AIzaSyDJ590q81TkArxpANKfHeVTa7l2xf0NnJU';
   //seth1
-   const API_KEY = "AIzaSyB8RKx81I_wLM5TZa2jNR6Jd8j04yYypsI";
+  //const API_KEY = "AIzaSyB8RKx81I_wLM5TZa2jNR6Jd8j04yYypsI";
   //Thomas1
   // const API_KEY = "AIzaSyBqnUPy6o1c-V4MGOw_1GcCueLKFJOSo5s";
   //Thomas2
@@ -64,7 +64,15 @@ $(document).ready(() => {
  $.get("/api/song/videoId").then((data) => {
     console.log('hello')
     console.log(data);
-    videoId = data;
+    videoId =  data[0].videoId;
+    videoId2 = data[1].videoId;
+    videoId3 = data[2].videoId;
+    videoId4 = data[3].videoId;
+    videoId5 = data[4].videoId;
+    videoId6 = data[5].videoId;
+    videoId7 = data[6].videoId;
+    videoId8 = data[7].videoId;
+    videoId9 = data[8].videoId;
 
 var YouTubePlayer = {
     current: 0,
@@ -72,7 +80,11 @@ var YouTubePlayer = {
     /**
      * Tracks ids here...
      */
-    videos: [videoId],
+    videos: [
+        videoId,
+        videoId2,
+        videoId3,
+    ],
     currentlyPlaying:function(){
         console.log(videoId);
         console.info('Current Track id', YouTubePlayer.videos[YouTubePlayer.current]);
@@ -121,9 +133,9 @@ var YouTubePlayer = {
      * Tracks ids here...
      */
     videos2: [
-        'Lq8bpo9KWa8',
-        'cpbbuaIA3Ds',
-    
+        videoId4,
+        videoId5,
+        videoId6,
     ],
     currentlyPlaying2:function(){
         console.info('Current2 Track id', YouTubePlayer2.videos2[YouTubePlayer2.current2]);
@@ -173,9 +185,9 @@ var YouTubePlayer = {
      * Tracks ids here...
      */
     videos3: [
-        'OtcdGkGusU0',
-        'cpbbuaIA3Ds',
-    
+        videoId7,
+        videoId8,
+        videoId9,
     ],
     currentlyPlaying3:function(){
         console.info('Current3 Track id', YouTubePlayer3.videos3[YouTubePlayer3.current3]);

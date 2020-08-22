@@ -161,8 +161,8 @@ module.exports = function(app) {
           }
         }
       ).then(data => {
-        console.log(data[0].dataValues.videoId);
-        res.json(data[0].dataValues.videoId)
+        console.log(data);
+        res.json(data);
       });
     }
   });
