@@ -222,6 +222,7 @@ var YouTubePlayer = {
     },
     onReady3: function (event) {
         event.target.loadVideoById(YouTubePlayer3.currentlyPlaying3());
+        YoutubePlayer3.pauseVideo();
     },
     onStateChange3: function (event) {
         if (event.data == YT.PlayerState.ENDED) {
