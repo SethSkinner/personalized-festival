@@ -7,7 +7,7 @@
 [Personalized Festival](https://serene-sands-67688.herokuapp.com/)
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)
-![GitHub repo size](https://img.shields.io/github/repo-size/SethSkinner/personalized-festival/tree/master)
+![GitHub repo size](https://img.shields.io/github/repo-size/SethSkinner/personalized-festival)
 
 ##  Contributors:
 [Seth Skinner](https://github.com/SethSkinner)
