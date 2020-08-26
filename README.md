@@ -4,10 +4,10 @@
 [Personalized Festival](https://github.com/SethSkinner/personalized-festival/tree/master)
 
 ##  Heroku Deployed Site:
-[Personalized Festival](https://warm-retreat-71951.herokuapp.com/)
+[Personalized Festival](https://serene-sands-67688.herokuapp.com/)
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)
-![GitHub repo size](https://img.shields.io/github/repo-size/SethSkinner/personalized-festival/tree/master)
+![GitHub repo size](https://img.shields.io/github/repo-size/SethSkinner/personalized-festival)
 
 ##  Contributors:
 [Seth Skinner](https://github.com/SethSkinner)
@@ -15,9 +15,9 @@
 [Thomas Bragg](http://github.com/TBragg800)
 
 ## Walkthrough Video Demonstration: 
-![Walkthrough](./public/assets/)
+![Walkthrough](./public/assets/Personalized _festival.gif)
 * YouTube link to the 
-[walkthrough]()
+[walkthrough](https://youtu.be/q2QQPKHtT20)
 
 ## Table of Contents
   [Description](#Description)
@@ -35,14 +35,23 @@
   [Questions](#Questions)
   
 ## Description
-  
+   This application is a personalized festival using MySQL, Node, Express, Handlebars and a Sequelize ORM. The MVC design pattern was utilized in combination with Node and MySQL to query and route data in the app, and Handlebars to generate the HTML.
 
 ## Installation
-* 
+* Begin by cloning the repo locally.
+* Using the CLI, the user should navigate to the project directory and run 'npm install'.
+* Use MySQL for database handling.
+* Start the database using the provided schema.sql to be copied into MySQL.
+* The user will need to register for a google api key. Best practices are to restric the api key to be used only on for the YouTube Data Api.
 
 ## Usage
- 
+* For locally hosted: 
+  After installation, the user should navigate to the project directory and run 'node server.js' in the CLI, then navigate to http:localhost:8080 
+  
+* For author hosted
+  visit the heroku deployed site at https://serene-sands-67688.herokuapp.com/.
 
+![](./public/assets/personalized_festival1.png)
 
 ## License
   MIT License
@@ -79,4 +88,4 @@ SOFTWARE.
   Github: [TBragg800](http://github.com/TBragg800)
 
 ## Screenshot of deployed application
-![](./public/assets/)
+![](./public/assets/personalized_festival2.png)
