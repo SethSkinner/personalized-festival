@@ -1,7 +1,6 @@
 // Requiring our models and passport as we've configured it
 const db = require("../models");
 const passport = require("../config/passport");
-const { Router } = require("express");
 const isAuthenticated = require("../config/middleware/isAuthenticated");
 
 module.exports = function(app) {
@@ -54,39 +53,6 @@ module.exports = function(app) {
       });
     }
   });
-
-
-//Router.get("/", (req, res) => {
-//  res.send("index.js");
-//});
-
-  // app.post("/api/attendees", (req, res) => {
-  //   db.Attendee.create({
-  //     name: req.body.name
-  //   }).then(dbAttendee => {
-  //     res.json(dbAttendee);
-  //   });
-  // });
-
-  // app.get("/api/attendees:id", (req, res) => {
-  //   db.Attendee.findOne({
-  //     where: {
-  //       id: req.params.id
-  //     }
-  //   }).then(dbAttendee => {
-  //     res.json(dbAttendee);
-  //   });
-  // });
-
-  // app.delete("/api/attendees:id", (req, res) => {
-  //   db.Attendee.destroy({
-  //     where: {
-  //       id: req.params.id
-  //     }
-  //   }).then(dbAttendee => {
-  //     res.json(dbAttendee);
-  //   });
-  // });
 
   app.post("/api/songs", isAuthenticated, (req, res) => {
     db.Song.create({
@@ -145,15 +111,8 @@ module.exports = function(app) {
 
   app.get("/api/song/videoId", (req, res) => {
     if (!req.user) {
-      // console.log(req.user);
-
       res.end();
-      //   // console.log("im here");
-      //   //   // The user is not logged in, send back an empty object
     } else {
-      //   //   // Otherwise send back the user's email and id
-      //   //   // Sending back a password, even a hashed password, isn't a good idea
-
       db.Song.findAll(
         {
           where: {
