@@ -15,7 +15,7 @@
 [Thomas Bragg](http://github.com/TBragg800)
 
 ## Walkthrough Video Demonstration: 
-![Walkthrough](./public/assets/Personalized _festival.gif)
+![Walkthrough](./public/assets/Personalized_festival.gif)
 * YouTube link to the 
 [walkthrough](https://youtu.be/q2QQPKHtT20)
 
